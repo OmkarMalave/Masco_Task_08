@@ -1,7 +1,8 @@
 import React from 'react';
 
 interface Service {
-    imageUrl: string;
+    blackImageUrl: string;
+    blueImageUrl: string;
     title: string;
     description: string;
 }
@@ -9,70 +10,61 @@ interface Service {
 const ServiceSection: React.FC = () => {
     const services: Service[] = [
         {
-            imageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-1.svg',
+            blackImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-black-service-1.svg',
+            blueImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-1.svg',
             title: 'Branding & Digital Strategies',
             description: 'Brand strategy is all about developing a unique identity that distinguishes your business.',
         },
         {
-            imageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-2.svg',
+            blackImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-black-service-2.svg',
+            blueImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-2.svg',
             title: 'Web Design & App Development',
             description: 'Web design & development is the process of creating a website or application.',
         },
         {
-            imageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-3.svg',
+            blackImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-black-service-3.svg',
+            blueImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-3.svg',
             title: 'Results-Driven Digital Marketing',
             description: 'Digital marketing reaches potential customers using the internet and digital communication.',
         },
         {
-            imageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-4.svg',
+            blackImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-black-service-4.svg',
+            blueImageUrl: 'https://masco-html.netlify.app/assets/img/icons/icon-blue-service-4.svg',
             title: 'Custom Software Development',
             description: 'Custom software development involves designing, building, and deploying software tailored to specific needs.',
         },
     ];
 
     return (
-        <div className="section-space mt-5 mb-8">
-            <div className="container-custom">
-                <div className="mb-16 xl:mb-20 jos" data-jos_once="1" data-jos_animation="fade-up"
-                    data-jos_timingfunction="ease" data-jos_duration="700" data-jos_delay="500" data-jos_counter="1">
-                    <div className="mx-auto max-w-590">
-                        <h2 className="text-center text-xl lg:text-2xl font-semibold leading-[1.33] tracking-[0.5px]">
-                            All the digital services that are convenient for you
-                        </h2>
-                    </div>
+        <section className="py-16 flex justify-center items-center">
+            <div className="px-7 py-8 container max-w-8xl mx-7">
+                <div className="text-center max-w-lg mx-auto px-6 mb-8">
+                    <h2 className="text-3xl font-semibold leading-tight">
+                        All the digital services that are convenient for you
+                    </h2>
                 </div>
-
-                <div className="grid gap-6 sm:grid-cols-2">
+                <div className="grid gap-8 md:grid-cols-2">
                     {services.map((service, index) => (
-                        <div key={index} className="jos" data-jos_delay={index * 0.3} data-jos_once="1" data-jos_animation="fade-up"
-                            data-jos_timingfunction="ease" data-jos_duration="700" data-jos_counter="1">
-                            <div className="group rounded-[10px] border border-[#E6E6E6] bg-white p-8 transition-all duration-300 ease-in-out hover:border-ColorOffWhite hover:bg-ColorOffWhite lg:p-10 h-full">
-                                <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row items-center">
-                                    <div className="relative mx-auto flex items-center justify-center w-16 lg:w-98">
-                                        <img src={service.imageUrl} alt="service-icon" className="opacity-100 h-auto w-full transition-all duration-300 ease-in-out group-hover:opacity-0" />
-                                        <img src={service.imageUrl} alt="service-icon" className="absolute h-auto w-full opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100" />
-                                    </div>
-                                    <div className="flex-1 text-center lg:text-left">
-                                        <div className="mb-4 text-xl lg:text-2xl font-semibold leading-[1.33] tracking-[0.5px] text-ColorBlack">
-                                            {service.title}
-                                        </div>
-                                        <p className="mb-5 text-ColorBlack/80 line-clamp-2">
-                                            {service.description}
-                                        </p>
-                                        <a href="/service-details" className="inline-flex items-center gap-2 text-base font-bold text-ColorBlack group-hover:text-ColorBlue">
-                                            Find out more
-                                            <span className="transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                                                <i className="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
+                        <div key={index} className="group flex p-6 border border-gray-300 bg-white rounded-md shadow transition-transform duration-300 ease-in-out hover:border-gray-400 hover:bg-gray-50 hover:scale-105">
+                            <div className="flex-shrink-0 mr-4 relative w-24 h-24">
+                                <img src={service.blackImageUrl} alt="service-icon" className="w-full h-full transition-opacity duration-300 ease-in-out group-hover:opacity-0" />
+                                <img src={service.blueImageUrl} alt="service-icon" className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
+                            </div>
+                            <div className="flex-1">
+                                <div className="text-lg font-semibold">{service.title}</div>
+                                <p className="text-gray-600 mt-2 mb-4">{service.description}</p>
+                                <a href="/service-details" className="text-blue-500 font-bold no-underline hover:underline flex items-center">
+                                    Find out more
+                                    <span className="ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

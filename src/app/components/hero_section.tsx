@@ -2,8 +2,8 @@ import React from 'react';
 
 const HeroSection: React.FC = () => {
     return (
-        <section className="relative overflow-hidden bg-gray-100 py-20 md:py-36 lg:py-40 xl:py-44">
-            <div className="container mx-auto px-4">
+        <section className="relative overflow-hidden bg-gradient-to-r from-teal-100 to-white px-9 py-20 md:py-36 lg:py-40 xl:py-44">
+            <div className="container  px-4">
                 <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-[1.1fr_minmax(0,_1fr)]">
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold">
@@ -45,19 +45,13 @@ const HeroSection: React.FC = () => {
                             alt="hero image"
                             className="w-full h-auto max-w-lg"
                         />
-                        <a
-                            href="https://www.youtube.com/watch?v=3nQNiWdeH2Q"
-                            className="absolute flex items-center justify-center w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-white text-blue-500 rounded-full"
-                            aria-label="video-play"
-                        >
-                            <span className="text-2xl">
-                                <i className="fas fa-play"></i>
-                            </span>
-                        </a>
+
+
+
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

@@ -2,8 +2,8 @@ import React from 'react';
 
 const ContentSection: React.FC = () => {
     return (
-        <div className="section-space">
-            <div className="container-custom">
+        <div className="section-space py-16">
+            <div className="container-custom max-w-7xl mx-auto px-4">
                 <div className="flex flex-col gap-y-20 lg:gap-y-[100px] xl:gap-y-[120px]">
                     {/* Content Area Single */}
                     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-24 xl:grid-cols-[1.2fr_minmax(0,_1fr)] xl:gap-[135px]">
@@ -12,7 +12,7 @@ const ContentSection: React.FC = () => {
                             data-jos_duration="700" data-jos_delay="500" data-jos_counter="1">
                             <div>
                                 <div className="mb-5">
-                                    <h2 className="text-xl lg:text-2xl">
+                                    <h2 className="text-0xl lg:text-5xl font-semibold">
                                         Boost the effectiveness of your promotions as well as polish your branding
                                     </h2>
                                 </div>
@@ -27,7 +27,6 @@ const ContentSection: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        {/* Content Block Left */}
                         {/* Content Block Right */}
                         <div className="relative jos" data-jos_animation="fade-left" data-jos_once="1"
                             data-jos_timingfunction="ease" data-jos_duration="700" data-jos_delay="500"
@@ -37,7 +36,6 @@ const ContentSection: React.FC = () => {
                                     alt="content-img-1" width="426" height="398" className="h-auto w-full rounded-[10px]" />
                             </div>
                         </div>
-                        {/* Content Block Right */}
                     </div>
                     {/* Content Area Single */}
 
@@ -49,16 +47,17 @@ const ContentSection: React.FC = () => {
                             data-jos_counter="1">
                             <div>
                                 <div className="mb-5">
-                                    <h2 className="text-xl lg:text-2xl">
-                                        Discover the latest digital strategies &amp; emerging ideas for business growth
+                                    <h2 className="text-0xl lg:text-5xl font-semibold
+                                    ">
+                                        Discover the latest digital strategies & emerging ideas for business growth
                                     </h2>
                                 </div>
-                                <p>
+                                <p className="mb-5">
                                     Our brand tenders and marketing mixologists always serve up unique,
                                     design-forward websites coded with today’s modern technologies
                                 </p>
                                 <ul className="flex flex-col gap-5 font-semibold text-ColorBlack">
-                                    <li className="flex items-start">
+                                    <li className="flex ">
                                         <span className="mr-3 inline-block text-xl text-ColorBlue"><i
                                             className="fa-solid fa-badge-check"></i></span>
                                         <span>Reach new business opportunities or test your product ideas.</span>
@@ -76,7 +75,6 @@ const ContentSection: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                        {/* Content Block Left */}
                         {/* Content Block Right */}
                         <div className="relative lg:order-1 jos" data-jos_animation="fade-right" data-jos_once="1"
                             data-jos_timingfunction="ease" data-jos_duration="700" data-jos_delay="500"
@@ -86,12 +84,10 @@ const ContentSection: React.FC = () => {
                                     alt="content-img-2" width="426" height="398" className="h-auto w-full rounded-[10px]" />
                             </div>
                         </div>
-                        {/* Content Block Right */}
                     </div>
                     {/* Content Area Single */}
                 </div>
             </div>
-            {/* Section Container */}
         </div>
     );
 }

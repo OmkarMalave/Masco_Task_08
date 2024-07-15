@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-white py-5 z-50" id="sticky-menu">
+        <header className=" top-0 left-2 right-0 bg-gradient-to-r from-teal-100 to-white py-5 px-3 z-50" id="sticky-menu">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between gap-x-8">
                     <a href="/">
@@ -203,7 +203,7 @@ const Header: React.FC = () => {
                             <a className="hover:text-blue-600">Login</a>
                         </a>
                         <a href="/signup">
-                            <a className="btn bg-blue-600 text-white rounded-full py-2 px-8 transition duration-300 ease-in-out hover:bg-blue-700 transform hover:scale-105">
+                            <a className="btn bg-blue-600 text-white rounded-full py-4 px-9 transition duration- ease-in-out hover:bg-blue-700 transform hover:scale-105">
                                 Sign up free
                             </a>
                         </a>
